@@ -1,15 +1,36 @@
+'use client';
+
 import React from 'react';
+import Link from 'next/link';
+import { useState } from 'react';
+import classes from '@/utils/classes';
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(projectList[0]);
+
   return (
     <section className='w-full h-auto flex flex-col gap-10 items-center'>
       <h2 className='mx-auto max-w-2xl text-4xl font-bold tracking-tight text-white'>
         Our Projects
       </h2>
-      <div className='w-full max-w-7xl min-h-[800px] h-[100vh] gap-10 px-5 mx-auto py-8 grid grid-cols-6 grid-rows-4 justify-items-center'>
+      <div className='w-full max-w-7xl min-h-[800px] h-[90vh] gap-10 px-5 mx-auto py-8 grid grid-cols-6 grid-rows-4 justify-items-center'>
         {/* -- details card */}
-        <div className=' col-span-2 row-span-3 w-full relative isolate overflow-hidden bg-gray-900 rounded-xl shadow-2xl border border-gray-400/10 p-4'>
-          <h3 className='text-3xl font-bold text-gray-100'>Goloka</h3>
+        <div className=' col-span-2 row-span-3 w-full relative isolate overflow-hidden bg-gray-900 rounded-2xl shadow-2xl border border-gray-400/10 py-4 px-8 flex flex-col gap-10'>
+          {/* -- title */}
+          <h3 className='text-3xl font-bold text-gray-100'>
+            {selectedProject.name}
+          </h3>
+          <p className='text-gray-300/90 text-sm h-44 w-full overflow-hidden text-ellipsis'>
+            {selectedProject.desc}
+          </p>
+
+          <Link
+            href={selectedProject.url}
+            target='_blank'
+            className='text-indigo-400 hover:text-indigo-300 transition-all duration-300 ease-out'
+          >
+            Try this project out &rarr;
+          </Link>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 1024 1024'
@@ -32,17 +53,23 @@ const Projects = () => {
           </svg>
         </div>
         {/* -- screenshots */}
-        <div className='bg-red-400/20 col-span-4 row-span-3 w-full'>
+        <div className='bg-red-400/20 col-span-4 row-span-3 w-full shadow-2xl rounded-2xl'>
           Screenshots
         </div>
         {/* -- selector */}
-        <div className='col-span-6 row-span-1 w-full flex items-center justify-evenly p-5 gap-6'>
+        <div className=' hidden md:col-span-6 row-span-1 w-full md:flex items-center justify-evenly p-5 gap-6'>
           {projectList.map((project, idx) => (
             <div
               key={idx}
-              className='w-full h-full border rounded-lg shadow-xl shadow-indigo-500/5 hover:shadow-2xl hover:-translate-y-2 transition-all ease-out duration-300 bg-white/5 cursor-pointer'
+              className={classes(
+                'w-full h-full border rounded-lg shadow-xl shadow-indigo-500/5 hover:shadow-2xl hover:shadow-indigo-500/50 hover:-translate-y-2 transition-all ease-out duration-300 bg-white/5 cursor-pointer flex items-center justify-center p-2 text-center',
+                selectedProject.name === project.name
+                  ? 'text-indigo-500 text-2xl border-gray-100/60 shadow-indigo-500/50'
+                  : 'text-gray-200 text-xl border-gray-100/30'
+              )}
+              onClick={() => setSelectedProject(project)}
             >
-              Hello
+              <p className=' font-bold tracking-wide'>{project.name}</p>
             </div>
           ))}
         </div>
@@ -56,7 +83,7 @@ export default Projects;
 const projectList = [
   {
     name: 'Goloka',
-    url: 'https://goloka.i0',
+    url: 'https://goloka.io',
     desc: 'Goloka is a cost-effective and AI-powered research design and verification solution that provides real-time, highly-localised and spatially-enriched insights to organisations crowdsourcing data globally.',
     images: [],
   },
@@ -69,7 +96,7 @@ const projectList = [
   {
     name: 'Anfani',
     url: 'https://anfani.org',
-    desc: ' is a powerful beneficial ownership transparency platform that connects the invisible dots between public procurement and private sector contractors in Nigeria. Journalists and other civic actors can make speedy and personalised search & discovery experiences that are powered by AI.Dataphyte Africa: Building on the vision of Dataphyte in Nigeria, Dataphyte Africa is a unique media platform providing a fresh perspective on Africa rooted in facts and data. We offer personalised news articles that cater to the interests of our target audience, making it easier for them to stay informed about their countries of origin. By bridging the gap between Africa and the diaspora community, we aim to empower individuals and communities to make informed decisions and drive positive change in Africa.',
+    desc: 'is a powerful beneficial ownership transparency platform that connects the invisible dots between public procurement and private sector contractors in Nigeria. Journalists and other civic actors can make speedy and personalised search & discovery experiences that are powered by AI.Dataphyte Africa: Building on the vision of Dataphyte in Nigeria, Dataphyte Africa is a unique media platform providing a fresh perspective on Africa rooted in facts and data. We offer personalised news articles that cater to the interests of our target audience, making it easier for them to stay informed about their countries of origin. By bridging the gap between Africa and the diaspora community, we aim to empower individuals and communities to make informed decisions and drive positive change in Africa.',
     images: [],
   },
   {
@@ -80,8 +107,14 @@ const projectList = [
   },
   {
     name: 'Election Platform',
-    url: '',
-    desc: '',
+    url: 'https://elections.dataphyte.com/',
+    desc: 'Portal is the largest repository of election data in Nigeria. From incidence tracking to results across all 774 local governments, DEP is a one-stop shop for elections data from national elections to elections at the subnational level from the governorship to state houses of assemblies. Need data on political players and the elections they won and lost? The port provides a map linking political history to present-day players.',
+    images: [],
+  },
+  {
+    name: 'IGBA',
+    url: 'https://elections.dataphyte.com/',
+    desc: 'IGBA is a location intelligence platform that transforms hyperlocal data into geospatial intelligence and analysis that help SMEs and development sectors drive strategy, product launch and programs evaluations.',
     images: [],
   },
 ];
