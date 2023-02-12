@@ -7,6 +7,7 @@ import {
 import Image from 'next/image';
 import Footer from '@/components/footer';
 import Projects from '@/components/projects';
+import BgGrad1 from '@/components/bg-gradient-1';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,7 +17,8 @@ export default function Home() {
       {/* -- ##################################### */}
       {/* -- HERO SECTION */}
       {/* -- ##################################### */}
-      <div className='mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:py-40 lg:px-8'>
+      <div className='mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:py-40 lg:px-8 isolate relative'>
+        <BgGrad1 />
         <div className='mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8'>
           <h1 className='text-3xl font-bold text-blue-400'>
             DATAPHYTE BUSINESS
@@ -33,7 +35,7 @@ export default function Home() {
           <div className='mt-10 flex items-center gap-x-6'>
             <a
               href='#'
-              className='rounded-md bg-blue-500 px-3.5 py-1.5 text-base transition-all duration-300 ease-out font-semibold leading-7 text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500'
+              className='rounded-md bg-indigo-500 px-3.5 py-1.5 text-base transition-all duration-300 ease-out font-semibold leading-7 text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500'
             >
               Request a call
             </a>
@@ -74,7 +76,7 @@ export default function Home() {
               aria-hidden='true'
               className='hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen'
             >
-              <div className='absolute inset-y-0 right-1/2 w-full rounded-r-3xl bg-[#212936] lg:right-72' />
+              <div className='absolute inset-y-0 right-1/2 w-full rounded-r-3xl ring-1 ring-inset ring-white/10 bg-gradient-to-br from-white/10 to-white/5 lg:right-72 shadow-xl' />
               <svg
                 className='absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12'
                 width={404}
@@ -110,7 +112,7 @@ export default function Home() {
             </div>
             <div className='relative mx-auto max-w-md px-6 sm:max-w-3xl lg:max-w-none lg:px-0 lg:py-20'>
               {/* Testimonial card*/}
-              <div className='relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-xl'>
+              <div className='relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-2xl shadow-indigo-600/10'>
                 <img
                   className='absolute inset-0 h-full w-full object-cover'
                   src='https://images.unsplash.com/photo-1521510895919-46920266ddb3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&fp-x=0.5&fp-y=0.6&fp-z=3&width=1440&height=1440&sat=-100'
@@ -188,31 +190,12 @@ export default function Home() {
                   always protected.
                 </p>
               </div>
-            </div>
-
-            {/* Stats section */}
+            </div>{' '}
             <div className='mt-10'>
-              <dl className='grid grid-cols-2 gap-x-4 gap-y-8'>
-                {stats.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className='border-t-2 border-gray-700 pt-6'
-                  >
-                    <dt className='text-base font-medium text-gray-400'>
-                      {stat.label}
-                    </dt>
-                    <dd className='text-3xl font-bold tracking-tight text-gray-50/90'>
-                      {stat.value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-              <div className='mt-10'>
-                <a href='#' className='text-base font-medium text-indigo-400'>
-                  Learn more about how we&apos;re changing the world
-                  <span aria-hidden='true'> &rarr;</span>
-                </a>
-              </div>
+              <a href='#' className='text-base font-medium text-indigo-400'>
+                Learn more about how we&apos;re changing the world
+                <span aria-hidden='true'> &rarr;</span>
+              </a>
             </div>
           </div>
         </div>
@@ -222,7 +205,7 @@ export default function Home() {
       {/* -- PREMIUM OFFERING */}
       {/* -- ##################################### */}
       <div className='mx-auto w-full max-w-[1200px] py-24 sm:px-6 sm:py-32 lg:px-8'>
-        <div className='relative isolate overflow-hidden bg-gray-900 px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16'>
+        <div className='relative isolate overflow-hidden bg-gray-900 px-6 py-24 text-center shadow-2xl shadow-indigo-400/20 sm:rounded-3xl sm:px-16 border border-gray-400/10'>
           <h2 className='mx-auto max-w-2xl text-4xl font-bold tracking-tight text-white'>
             Access Our Premium Offerings
           </h2>
