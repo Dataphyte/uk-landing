@@ -47,15 +47,60 @@ import ElectionImg_5 from '../assets/images/screenshots/election/election_5.png'
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(projectList[0]);
+  const [showList, setShowList] = useState(false);
 
   return (
     <section className='w-full h-auto flex flex-col gap-10 items-center'>
       <h2 className='mx-auto max-w-2xl text-4xl font-bold tracking-tight text-white'>
         Our Projects
       </h2>
+
+      <button
+        className='-mt-2 -mb-8 py-2 px-8 rounded-lg shadow-lg bg-indigo-500 text-gray-100'
+        onClick={() => setShowList(true)}
+      >
+        View Projects
+      </button>
+
+      {/* -- #################################### */}
+      {/* -- mobile prject list */}
+      {/* -- #################################### */}
+      <div
+        className={classes(
+          'md:hidden absolute w-[90%] bg-gray-900 h-auto py-20 px-3  border border-gray-300/30 z-10 rounded-lg items-center justify-center flex-wrap gap-4 duration-300 ease-out transition-all flex',
+          showList
+            ? ' translate-y-0 opacity-100 pointer-events-auto'
+            : ' -translate-y-[50px] opacity-0 pointer-events-none'
+        )}
+      >
+        <button
+          className='absolute top-4 py-1 px-5 rounded-sm bg-rose-500 text-gray-100'
+          onClick={() => setShowList(false)}
+        >
+          close
+        </button>
+        {projectList.map((project, idx) => (
+          <div
+            key={idx}
+            className={classes(
+              'w-24 h-20 border rounded-lg shadow-xl shadow-indigo-500/5  transition-all ease-out duration-300 bg-white/5 cursor-pointer flex items-center justify-center p-2 text-center',
+              selectedProject.name === project.name
+                ? 'text-indigo-500 text-sm border-gray-100/60 shadow-indigo-500/50'
+                : 'text-gray-200 text-base border-gray-100/30'
+            )}
+            onClick={() => {
+              setSelectedProject(project);
+              setShowList(false);
+            }}
+          >
+            <p>{project.name}</p>
+          </div>
+        ))}
+      </div>
+
       <div className='w-full max-w-7xl min-h-[800px] h-[90vh] gap-10 px-5 mx-auto py-8 grid grid-cols-6 grid-rows-4 justify-items-center'>
         {/* -- details card */}
-        <div className=' col-span-2 row-span-3 w-full relative isolate overflow-hidden bg-gray-800 rounded-2xl shadow-2xl border border-gray-400/10 py-4 px-8 flex flex-col gap-10'>
+        <div className='col-span-6 md:col-span-2 row-span-3 w-full relative isolate overflow-hidden bg-gray-800 rounded-2xl shadow-2xl border border-gray-400/10 py-4 px-8 flex flex-col gap-10'>
           {/* -- title */}
           <h3 className='text-3xl font-bold text-gray-100'>
             {selectedProject.name}
@@ -102,14 +147,19 @@ const Projects = () => {
           loop
           draggable={false}
           preventClicks={true}
-          className='col-span-4 row-span-3 w-full shadow-2xl rounded-2xl flex items-center shadow-indigo-500/20 justify-center'
+          className='col-span-6 md:col-span-4 row-span-3 w-full shadow-2xl rounded-2xl flex items-center shadow-indigo-500/20 justify-center'
         >
           {selectedProject.images.map((img, idx) => (
             <SwiperSlide
               className='w-full h-full flex items-center justify-center relative p-3'
               key={idx}
             >
-              <Image src={img} fill className='object-cover object-center' />
+              <Image
+                src={img}
+                fill
+                className='object-cover object-center'
+                alt='project screenshot'
+              />
             </SwiperSlide>
           ))}
         </Swiper>

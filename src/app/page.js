@@ -57,12 +57,12 @@ export default function Home() {
         <div className='mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32'>
           <div className='max-w-3xl flex-none sm:max-w-5xl lg:max-w-none relative'>
             <Image
-              // src='https://tailwindui.com/img/component-images/dark-project-app-screenshot.png'
-              src={HeroImg}
+              src='https://tailwindui.com/img/component-images/dark-project-app-screenshot.png'
+              // src={HeroImg}
               alt='App screenshot'
               width={1432}
               height={802}
-              className='w-[48rem] rounded-md bg-white/5 shadow-2xl shadow-indigo-500/10 ring-1 ring-white/10'
+              className='w-[78rem] rounded-md bg-white/5 shadow-2xl shadow-indigo-500/10 ring-1 ring-white/10'
             />
             <div className='absolute w-full h-full bg-gradient-to-tl from-[#181E37]/20 to-[#222C47]/10 top-0' />
           </div>
