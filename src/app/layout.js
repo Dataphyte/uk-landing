@@ -1,5 +1,7 @@
-import BgGrad1 from '@/components/bg-gradient-1';
+import 'swiper/swiper.min.css';
+import 'swiper/swiper-bundle.min.css';
 import './globals.css';
+import BgGrad1 from '@/components/bg-gradient-1';
 
 export default function RootLayout({ children }) {
   return (
