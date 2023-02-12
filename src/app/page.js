@@ -1,10 +1,10 @@
 import { Inter } from '@next/font/google';
 import {
-  ChevronRightIcon,
   AcademicCapIcon,
   ChartPieIcon,
   ClipboardDocumentCheckIcon,
 } from '@heroicons/react/20/solid';
+import Image from 'next/image';
 import Footer from '@/components/footer';
 import Projects from '@/components/projects';
 
@@ -162,11 +162,11 @@ export default function Home() {
               </p>
               <div className='mt-6 space-y-6 text-gray-300'>
                 <p className='text-lg'>
-                  In today's fast-paced world, it's crucial to be informed and
-                  up-to-date on current events. That's why we specialize in
-                  providing our clients with compelling and informative
-                  data-driven journalism that educates and engages audiences
-                  across all platforms.
+                  In today&apos;s fast-paced world, it&apos;s crucial to be
+                  informed and up-to-date on current events. That&apos;s why we
+                  specialize in providing our clients with compelling and
+                  informative data-driven journalism that educates and engages
+                  audiences across all platforms.
                 </p>
                 <p className='text-base leading-7'>
                   We are a team of dedicated data analysts and journalists, who
@@ -209,7 +209,7 @@ export default function Home() {
               </dl>
               <div className='mt-10'>
                 <a href='#' className='text-base font-medium text-indigo-400'>
-                  Learn more about how we're changing the world
+                  Learn more about how we&apos;re changing the world
                   <span aria-hidden='true'> &rarr;</span>
                 </a>
               </div>
@@ -329,9 +329,11 @@ export default function Home() {
           >
             {people.map((person) => (
               <li key={person.name}>
-                <img
+                <Image
                   className='mx-auto h-56 w-56 rounded-full'
                   src={person.imageUrl}
+                  width='224'
+                  height='224'
                   alt=''
                 />
                 <h3 className='mt-6 text-base font-semibold leading-7 tracking-tight text-gray-100'>
