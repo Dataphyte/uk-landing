@@ -52,11 +52,11 @@ const Projects = () => {
   return (
     <section className='w-full h-auto flex flex-col gap-10 items-center'>
       <h2 className='mx-auto max-w-2xl text-4xl font-bold tracking-tight text-white'>
-        Our Projects
+        Projects
       </h2>
 
       <button
-        className='-mt-2 -mb-8 py-2 px-8 rounded-lg shadow-lg bg-indigo-500 text-gray-100'
+        className='-mt-2 -mb-8 py-2 px-8 rounded-lg shadow-lg bg-indigo-500 text-gray-100 md:hidden'
         onClick={() => setShowList(true)}
       >
         View Projects
