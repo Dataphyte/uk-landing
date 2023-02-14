@@ -222,13 +222,14 @@ export default function Home() {
       {/* -- PREMIUM OFFERING */}
       {/* -- ##################################### */}
       <div className='mx-auto w-full max-w-[1200px] py-24 sm:px-6 sm:py-32 lg:px-8'>
-        <div className='relative isolate overflow-hidden bg-gray-900 px-6 py-24 text-center shadow-2xl shadow-indigo-400/20 sm:rounded-3xl sm:px-16 border border-gray-400/10'>
+        <div className='relative isolate overflow-hidden bg-gray-900 px-6 py-24 text-center md:shadow-2xl shadow-indigo-400/20 sm:rounded-3xl sm:px-16 border border-gray-400/10'>
           <h2 className='mx-auto max-w-2xl text-4xl font-bold tracking-tight text-white'>
             Access Our Premium Offerings
           </h2>
           <p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300'>
-            Incididunt sint fugiat pariatur cupidatat consectetur sit cillum
-            anim id veniam aliqua proident excepteur commodo do ea.
+            Unlock exclusive features and take your experience to the next level
+            with our premium subscription. Gain access to a wide range of
+            benefits
           </p>
           <div className='mt-10 flex items-center justify-center gap-x-6'>
             <a
