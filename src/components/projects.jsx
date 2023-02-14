@@ -105,7 +105,7 @@ const Projects = () => {
           <h3 className='text-3xl font-bold text-gray-100'>
             {selectedProject.name}
           </h3>
-          <p className='text-gray-300/90 h-2/3 w-full overflow-hidden text-ellipsis'>
+          <p className='text-gray-300/90 h-2/3 w-full overflow-hidden text-clip'>
             {selectedProject.desc}
           </p>
 
