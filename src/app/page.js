@@ -421,7 +421,7 @@ const people = [
     linkedinUrl: '#',
   },
   {
-    name: 'Cahrles Mba',
+    name: 'Charles Mba',
     role: 'Program Manager',
     imageUrl: CharlesImg,
     twitterUrl: '#',
