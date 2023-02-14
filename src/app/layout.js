@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className='relative isolate overflow-hidden bg-gray-900'>
+      <body className='relative isolate overflow-hidden bg-gray-900 scroll-smooth'>
         <svg
           className='absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]'
           aria-hidden='true'

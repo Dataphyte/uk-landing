@@ -10,6 +10,12 @@ import Projects from '@/components/projects';
 import BgGrad1 from '@/components/bg-gradient-1';
 import HeroImg from '@/assets/images/hero_img_1.webp';
 
+// -- team image import -->
+import JoshuaImg from '@/assets/images/team/joshua.jpg';
+import AdenikeImg from '@/assets/images/team/adenike.jpg';
+import CharlesImg from '@/assets/images/team/charles.jpg';
+import EmmanuelImg from '@/assets/images/team/emmanuel.jpg';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
@@ -41,7 +47,8 @@ export default function Home() {
               Request a call
             </a>
             <a
-              href='#'
+              href='https://dataphyte.com'
+              target='_blank'
               className='text-base font-semibold leading-7 text-white group duration-200 transition-all ease-out hover:text-blue-200'
             >
               View updates&nbsp;
@@ -196,7 +203,11 @@ export default function Home() {
               </div>
             </div>{' '}
             <div className='mt-10'>
-              <a href='#' className='text-base font-medium text-indigo-400'>
+              <a
+                href='https://www.dataphyte.com/topics/latest-reports/special-report/'
+                className='text-base font-medium text-indigo-400'
+                target='_blank'
+              >
                 Learn more about how we&apos;re changing the world
                 <span aria-hidden='true'> &rarr;</span>
               </a>
@@ -223,12 +234,6 @@ export default function Home() {
               className='rounded-md bg-white px-3.5 py-1.5 text-base font-semibold leading-7 text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
             >
               Get started
-            </a>
-            <a
-              href='#'
-              className='text-base font-semibold leading-7 text-white'
-            >
-              Learn more <span aria-hidden='true'>→</span>
             </a>
           </div>
           <svg
@@ -317,7 +322,7 @@ export default function Home() {
             {people.map((person) => (
               <li key={person.name}>
                 <Image
-                  className='mx-auto h-56 w-56 rounded-full'
+                  className='mx-auto h-56 w-56 rounded-full object-cover'
                   src={person.imageUrl}
                   width='224'
                   height='224'
@@ -403,41 +408,37 @@ const servicesCards = [
 const people = [
   {
     name: 'Joshau Olufemi',
-    role: 'Copywriter',
-    imageUrl:
-      'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    role: 'CEO',
+    imageUrl: JoshuaImg,
     twitterUrl: '#',
     linkedinUrl: '#',
   },
   {
     name: 'Adenike Aloba',
     role: 'Copywriter',
-    imageUrl:
-      'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    imageUrl: AdenikeImg,
     twitterUrl: '#',
     linkedinUrl: '#',
   },
   {
     name: 'Cahrles Mba',
-    role: 'Copywriter',
-    imageUrl:
-      'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    role: 'Program Manager',
+    imageUrl: CharlesImg,
     twitterUrl: '#',
     linkedinUrl: '#',
   },
   {
     name: 'Hanifa Babsadiq',
-    role: 'Copywriter',
+    role: 'Social media Manager',
     imageUrl:
-      'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      'https://www.pngitem.com/pimgs/m/579-5798505_user-placeholder-svg-hd-png-download.png',
     twitterUrl: '#',
     linkedinUrl: '#',
   },
   {
     name: 'Emmanuel Alawode',
-    role: 'Copywriter',
-    imageUrl:
-      'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    role: 'Software Developer',
+    imageUrl: EmmanuelImg,
     twitterUrl: '#',
     linkedinUrl: '#',
   },
@@ -445,7 +446,7 @@ const people = [
     name: 'Ayantola Ayanlade',
     role: 'Copywriter',
     imageUrl:
-      'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      'https://www.pngitem.com/pimgs/m/579-5798505_user-placeholder-svg-hd-png-download.png',
     twitterUrl: '#',
     linkedinUrl: '#',
   },
@@ -453,7 +454,7 @@ const people = [
     name: 'Oluseyi Olufemi',
     role: 'Copywriter',
     imageUrl:
-      'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      'https://www.pngitem.com/pimgs/m/579-5798505_user-placeholder-svg-hd-png-download.png',
     twitterUrl: '#',
     linkedinUrl: '#',
   },
