@@ -49,6 +49,7 @@ export default function Home() {
             <a
               href='https://dataphyte.com'
               target='_blank'
+              rel='noreferrer'
               className='text-base font-semibold leading-7 text-white group duration-200 transition-all ease-out hover:text-blue-200'
             >
               View updates&nbsp;
@@ -207,6 +208,7 @@ export default function Home() {
                 href='https://www.dataphyte.com/topics/latest-reports/special-report/'
                 className='text-base font-medium text-indigo-400'
                 target='_blank'
+                rel='noreferrer'
               >
                 Learn more about how we&apos;re changing the world
                 <span aria-hidden='true'> &rarr;</span>

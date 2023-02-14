@@ -112,6 +112,7 @@ const Projects = () => {
           <Link
             href={selectedProject.url}
             target='_blank'
+            rel='noreferrer'
             className='text-indigo-400 hover:text-indigo-300 transition-all duration-300 ease-out'
           >
             Try this project out &rarr;
