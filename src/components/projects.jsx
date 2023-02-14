@@ -59,7 +59,7 @@ const Projects = () => {
         className='-mt-2 -mb-8 py-2 px-8 rounded-lg shadow-lg bg-indigo-500 text-gray-100 md:hidden'
         onClick={() => setShowList(true)}
       >
-        View Projects
+        Project List
       </button>
 
       {/* -- #################################### */}
