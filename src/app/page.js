@@ -418,7 +418,7 @@ const people = [
   },
   {
     name: 'Adenike Aloba',
-    role: 'Copywriter',
+    role: 'Program Director',
     imageUrl: AdenikeImg,
     twitterUrl: '#',
     linkedinUrl: '#',
@@ -455,7 +455,7 @@ const people = [
   },
   {
     name: 'Oluseyi Olufemi',
-    role: 'Copywriter',
+    role: 'Research Lead',
     imageUrl:
       'https://www.pngitem.com/pimgs/m/579-5798505_user-placeholder-svg-hd-png-download.png',
     twitterUrl: '#',
