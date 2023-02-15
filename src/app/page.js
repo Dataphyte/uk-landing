@@ -17,6 +17,7 @@ import CharlesImg from '@/assets/images/team/charles.jpg';
 import EmmanuelImg from '@/assets/images/team/emmanuel.jpg';
 import OluseyiImg from '@/assets/images/team/oluseyi.jpg';
 import AyantolaImg from '@/assets/images/team/ayantola.jpg';
+import HanifaImg from '@/assets/images/team/hanifa.jpg';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -434,9 +435,8 @@ const people = [
   },
   {
     name: 'Hanifa Babsadiq',
-    role: 'Social media Manager',
-    imageUrl:
-      'https://www.pngitem.com/pimgs/m/579-5798505_user-placeholder-svg-hd-png-download.png',
+    role: 'Communications Specialist',
+    imageUrl: HanifaImg,
     twitterUrl: '#',
     linkedinUrl: '#',
   },
