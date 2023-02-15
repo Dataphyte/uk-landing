@@ -15,6 +15,8 @@ import JoshuaImg from '@/assets/images/team/joshua.jpg';
 import AdenikeImg from '@/assets/images/team/adenike.jpg';
 import CharlesImg from '@/assets/images/team/charles.jpg';
 import EmmanuelImg from '@/assets/images/team/emmanuel.jpg';
+import OluseyiImg from '@/assets/images/team/oluseyi.jpg';
+import AyantolaImg from '@/assets/images/team/ayantola.jpg';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -35,9 +37,9 @@ export default function Home() {
             Socioeconomic Questions, Answered With Data.
           </h1>
           <p className='mt-6 text-lg leading-8 text-gray-300'>
-            We are a research and data analytics organisation with the mission
-            to deploy data tools and technology for the socio-economic
-            development of Nigeria.
+            We are a research and data analytics company offering media,
+            research and data analytics service for public and private sector
+            growth.
           </p>
           <div className='mt-10 flex items-center gap-x-6'>
             <a
@@ -447,17 +449,15 @@ const people = [
   },
   {
     name: 'Ayantola Ayanlade',
-    role: 'Copywriter',
-    imageUrl:
-      'https://www.pngitem.com/pimgs/m/579-5798505_user-placeholder-svg-hd-png-download.png',
+    role: 'Data Journalist',
+    imageUrl: AyantolaImg,
     twitterUrl: '#',
     linkedinUrl: '#',
   },
   {
     name: 'Oluseyi Olufemi',
     role: 'Research Lead',
-    imageUrl:
-      'https://www.pngitem.com/pimgs/m/579-5798505_user-placeholder-svg-hd-png-download.png',
+    imageUrl: OluseyiImg,
     twitterUrl: '#',
     linkedinUrl: '#',
   },
