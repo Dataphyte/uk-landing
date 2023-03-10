@@ -277,9 +277,9 @@ export default function Home() {
               Services
             </h2>
             <p className='mt-6 text-lg leading-8 text-gray-300'>
-              Whether you're looking for in-depth data analysis, data
-              visualization, or data-driven storytelling, we've got you covered.
-              Here are some of the services we offer.
+              Whether you&apos;re looking for in-depth data analysis, data
+              visualization, or data-driven storytelling, we&apos;ve got you
+              covered. Here are some of the services we offer.
             </p>
           </div>
           <div className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8'>
