@@ -2,7 +2,9 @@ import { Inter } from '@next/font/google';
 import {
   AcademicCapIcon,
   ChartPieIcon,
+  CircleStackIcon,
   ClipboardDocumentCheckIcon,
+  PresentationChartBarIcon,
 } from '@heroicons/react/20/solid';
 import Image from 'next/image';
 import Footer from '@/components/footer';
@@ -275,9 +277,9 @@ export default function Home() {
               Services
             </h2>
             <p className='mt-6 text-lg leading-8 text-gray-300'>
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
+              Whether you're looking for in-depth data analysis, data
+              visualization, or data-driven storytelling, we've got you covered.
+              Here are some of the services we offer.
             </p>
           </div>
           <div className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8'>
@@ -409,6 +411,18 @@ const servicesCards = [
       'We help organisations present both data and reports in easy-to-digest and visually compelling ways. We use state-of-the-art design tools and location intelligence software to deliver the passion and purpose your reports deserve. ',
     icon: ChartPieIcon,
   },
+  {
+    name: 'Socio-Economic Reports',
+    description:
+      'Subscribe to our thoughtfully crafted insights on socio-economic trends and indicators. The reports are produced to offer policy analysis and advisory to decision makers in the Nigerian public, private and development sectors. We cover various themes such as agriculture, energy, environment, finance, fiscal policy, gender health, security, and transportation.',
+    icon: PresentationChartBarIcon,
+  },
+  {
+    name: 'Datastore',
+    description:
+      'Check out our free and paid datasets about Economy, Education, Energy, Environment, Extractive, Finance, Health, and a myraid of other categories. Our datasets are in clean, machine-readable formats useful for various needs of journalists, researchers and policy analysts. Our premium datasets are well curated and ready for insights, analysis, and location intelligence documentation you won’t find anywhere.',
+    icon: CircleStackIcon,
+  },
 ];
 
 const people = [
@@ -462,11 +476,4 @@ const people = [
     linkedinUrl: 'https://ng.linkedin.com/in/seyiolufemi ',
   },
   // More people...
-];
-
-const stats = [
-  { label: 'Founded', value: '2018' },
-  { label: 'Employees', value: '50' },
-  { label: 'Users', value: '15,213' },
-  { label: 'Products', value: '7+' },
 ];
