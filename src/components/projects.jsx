@@ -99,6 +99,23 @@ const Projects = () => {
       </div>
 
       <div className='w-full max-w-7xl min-h-[800px] h-[90vh] gap-10 px-5 mx-auto py-8 grid grid-cols-6 grid-rows-4 justify-items-center'>
+        {/* -- selector */}
+        <div className=' hidden md:col-span-6 row-span-1 w-full md:flex items-center justify-evenly p-5 gap-6'>
+          {projectList.map((project, idx) => (
+            <div
+              key={idx}
+              className={classes(
+                'w-full h-full border rounded-lg shadow-xl shadow-indigo-500/5 hover:shadow-2xl hover:shadow-indigo-500/50 hover:-translate-y-2 transition-all ease-out duration-300 bg-white/5 cursor-pointer flex items-center justify-center p-2 text-center',
+                selectedProject.name === project.name
+                  ? 'text-indigo-500 text-2xl border-gray-100/60 shadow-indigo-500/50'
+                  : 'text-gray-200 text-xl border-gray-100/30'
+              )}
+              onClick={() => setSelectedProject(project)}
+            >
+              <p className=' font-bold tracking-wide'>{project.name}</p>
+            </div>
+          ))}
+        </div>
         {/* -- details card */}
         <div className='col-span-6 md:col-span-2 row-span-3 w-full relative isolate overflow-hidden bg-gray-800 rounded-2xl shadow-2xl border border-gray-400/10 py-4 px-8 flex flex-col gap-10'>
           {/* -- title */}
@@ -164,23 +181,6 @@ const Projects = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* -- selector */}
-        <div className=' hidden md:col-span-6 row-span-1 w-full md:flex items-center justify-evenly p-5 gap-6'>
-          {projectList.map((project, idx) => (
-            <div
-              key={idx}
-              className={classes(
-                'w-full h-full border rounded-lg shadow-xl shadow-indigo-500/5 hover:shadow-2xl hover:shadow-indigo-500/50 hover:-translate-y-2 transition-all ease-out duration-300 bg-white/5 cursor-pointer flex items-center justify-center p-2 text-center',
-                selectedProject.name === project.name
-                  ? 'text-indigo-500 text-2xl border-gray-100/60 shadow-indigo-500/50'
-                  : 'text-gray-200 text-xl border-gray-100/30'
-              )}
-              onClick={() => setSelectedProject(project)}
-            >
-              <p className=' font-bold tracking-wide'>{project.name}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

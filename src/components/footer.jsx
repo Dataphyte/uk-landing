@@ -44,12 +44,14 @@ export default function Footer() {
           <div className='mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0'>
             <div className='text-white text-2xl col-span-1'>
               <p className='text-lg'>Contact Info</p>
-              <p className='text-sm text-gray-200 mt-6'>
-                Nigeria: 34, Okotie Eboh Street, Utako, Abuja, FCT 900108.
-                (+234) 811 666 5321 partners@dataphyte.com
+              <p className='text-sm text-gray-300 mt-6'>
+                <b className='text-gray-200'>Nigeria:&nbsp;</b> 34, Okotie Eboh
+                Street, Utako, Abuja, FCT 900108. (+234) 811 666 5321
+                partners@dataphyte.com
               </p>
-              <p className='text-sm text-gray-200 mt-3'>
-                UK: International House, 126 Colmore Row, Birmingham, B3 3AP
+              <p className='text-sm text-gray-300 mt-3'>
+                <b className='text-gray-200'> UK:&nbsp;</b> International House,
+                126 Colmore Row, Birmingham, B3 3AP
               </p>
             </div>
             <div className='md:grid md:grid-cols-2 md:gap-8'>

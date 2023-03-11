@@ -4,6 +4,7 @@ import {
   ChartPieIcon,
   CircleStackIcon,
   ClipboardDocumentCheckIcon,
+  NewspaperIcon,
   PresentationChartBarIcon,
 } from '@heroicons/react/20/solid';
 import Image from 'next/image';
@@ -11,6 +12,7 @@ import Footer from '@/components/footer';
 import Projects from '@/components/projects';
 import BgGrad1 from '@/components/bg-gradient-1';
 import HeroImg from '@/assets/images/hero_img_1.webp';
+import Link from 'next/link';
 
 // -- team image import -->
 import JoshuaImg from '@/assets/images/team/joshua.jpg';
@@ -284,7 +286,9 @@ export default function Home() {
           </div>
           <div className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8'>
             {servicesCards.map((card) => (
-              <div
+              <Link
+                href={card.link}
+                target='_blank'
                 key={card.name}
                 className='flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10 hover:-translate-y-[10px] transition-all duration-300 ease-out hover:shadow-2xl cursor-pointer'
               >
@@ -298,7 +302,7 @@ export default function Home() {
                     {card.description}
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -394,34 +398,46 @@ export default function Home() {
 
 const servicesCards = [
   {
+    name: 'Data Journalism',
+    description:
+      'We deploy combine human agency and technology to gather primary and secondary data needed for business, policy, and development decisions. Our thousands of field agents are on standby to conduct surveys, focus groups, and monitor projects to give you bespoke analysis and desired results. ',
+    icon: NewspaperIcon,
+    link: 'https://goloka.io',
+  },
+  {
     name: 'Data Collection',
     description:
       'We deploy combine human agency and technology to gather primary and secondary data needed for business, policy, and development decisions. Our thousands of field agents are on standby to conduct surveys, focus groups, and monitor projects to give you bespoke analysis and desired results. ',
     icon: ClipboardDocumentCheckIcon,
+    link: 'https://goloka.io',
   },
   {
     name: 'Training',
     description:
       'Dataphyte Academy offers (both) physical and virtual classes in data science and data journalism, tailored to help individuals and organisations learn to use data analytics skills for insights, storytelling and smart decisions. ',
     icon: AcademicCapIcon,
+    link: 'https://academy.dataphyte.com',
   },
   {
     name: 'Design',
     description:
       'We help organisations present both data and reports in easy-to-digest and visually compelling ways. We use state-of-the-art design tools and location intelligence software to deliver the passion and purpose your reports deserve. ',
     icon: ChartPieIcon,
+    link: 'hhttps://www.dataphyte.com/visualisation/',
   },
   {
     name: 'Socio-Economic Reports',
     description:
       'Subscribe to our thoughtfully crafted insights on socio-economic trends and indicators. The reports are produced to offer policy analysis and advisory to decision makers in the Nigerian public, private and development sectors. We cover various themes such as agriculture, energy, environment, finance, fiscal policy, gender health, security, and transportation.',
     icon: PresentationChartBarIcon,
+    link: 'https://datadive.substack.com/',
   },
   {
     name: 'Datastore',
     description:
       'Check out our free and paid datasets about Economy, Education, Energy, Environment, Extractive, Finance, Health, and a myraid of other categories. Our datasets are in clean, machine-readable formats useful for various needs of journalists, researchers and policy analysts. Our premium datasets are well curated and ready for insights, analysis, and location intelligence documentation you won’t find anywhere.',
     icon: CircleStackIcon,
+    link: 'https://dataplex.dataphyte.com',
   },
 ];
 
