@@ -13,6 +13,7 @@ import Projects from '@/components/projects';
 import BgGrad1 from '@/components/bg-gradient-1';
 import HeroImg from '@/assets/images/hero_img_1.webp';
 import Link from 'next/link';
+import Nav from '@/components/nav';
 
 // -- team image import -->
 import JoshuaImg from '@/assets/images/team/joshua.jpg';
@@ -27,7 +28,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <main className='w-full flex flex-col items-center'>
+    <main className='w-full flex flex-col items-center relative'>
+      <Nav />
       {/* -- ##################################### */}
       {/* -- HERO SECTION */}
       {/* -- ##################################### */}
@@ -47,19 +49,19 @@ export default function Home() {
             growth.
           </p>
           <div className='mt-10 flex items-center gap-x-6'>
-            <a
+            {/* <a
               href='#'
               className='rounded-md bg-indigo-500 px-3.5 py-1.5 text-base transition-all duration-300 ease-out font-semibold leading-7 text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500'
             >
               Request a call
-            </a>
+            </a> */}
             <a
-              href='https://dataphyte.com'
+              href='https://paystack.shop/dataphyte'
               target='_blank'
               rel='noreferrer'
               className='text-base font-semibold leading-7 text-white group duration-200 transition-all ease-out hover:text-blue-200'
             >
-              View updates&nbsp;
+              View Insights&nbsp;
               <span
                 aria-hidden='true'
                 className='group-hover:ml-2  duration-200 transition-all ease-out'
